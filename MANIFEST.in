@@ -1,0 +1,3 @@
+recursive-include ckanext *.js
+recursive-include ckanext *.html
+recursive-include ckanext *.css

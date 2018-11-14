@@ -1,0 +1,77 @@
+<div class="module-content disqus-comments">
+  <h3>Comments</h3>
+  <div id="disqus_messages" style="display: none;"></div>
+  <div id="disqus_num_comments"></div>
+  <div id="disqus_add_comment" style="display: none;">
+    <div class="user-avatar"><img src="//a.disquscdn.com/uploads/users/9087/2489/avatar92.jpg?1389868656"></div>
+    <div id="comment_box">
+        <form id="add_comment_form">
+            <textarea name="message" class="message" placeholder="Add a comment"></textarea>
+            <div class="author_information">
+              <input type="text" class="author_name" name="author_name" placeholder="Name" />
+              <input type="email" class="author_email" name="author_email" placeholder="Email" />
+              <input type="submit" class="btn btn-primary btn-xs pull-right" value="Post comment" />
+              <div class="errors" style="display: none;"></div>
+            </div>
+        </form>
+    </div>
+  </div>
+  <div id="disqus_thread">
+    <div class="loader"><img src="{{ site_url }}/loader.gif" /></div>
+    <div style="display: none;">
+    <div class="empty">No comments have been posted yet.</div>
+    <div class="post">
+      <div class="post-content">
+        <div class="post-avatar"><img src="//a.disquscdn.com/uploads/users/9087/2489/avatar92.jpg?1389868656"></div>
+        <div class="post-header">
+            <span class="post-author"></span> <span class="bullet">&bull;</span> <span class="post-time"></span>
+        </div>
+        <div class="post-body">
+            <p></p>
+        </div>
+      </div>
+      <div class="post-menu">
+        <ul>
+          <li><a href="#" class="post-menu-reply">Reply</a></li>
+          <li style="display: none;"><a href="#" class="post-menu-collapse">Collapse</a></li>
+        </ul>
+      </div>
+      <div class="form-errors">
+      </div>
+      <div class="post-reply-form">
+      </div>
+      <div class="post-replies">
+      </div>
+    </div>
+    </div>
+  </div>
+  <div id="disqus-brand">
+    <a href="http://disqus.com"><img src="//a.disquscdn.com/dotcom/d-e357401/img/brand/disqus-social-icon-dark-transparent.png"></a>
+  </div>
+  <script type="text/javascript">
+    var disqus_identifier = '{{ identifier }}';
+    var site_url = '{{ site_url }}';
+  </script>
+  {% resource 'disqus/disqus.css' %}
+  {% resource 'disqus/jquery.timeago.js' %}
+  {% resource 'disqus/disqus.js' %}
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="comment-terms-modal" tabindex="-1" role="dialog" aria-labelledby="comment-terms-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="comment-terms-modal-label">Terms of Use</h4>
+      </div>
+      {% block disclaimer %}
+        You should extend over this block
+      {% endblock %}
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default terms-decline" data-dismiss="modal">Decline</button>
+        <button type="button" class="btn btn-primary terms-accept" data-dismiss="modal">Accept</button>
+      </div>
+    </div>
+  </div>
+</div>

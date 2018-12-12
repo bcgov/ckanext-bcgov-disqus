@@ -19,7 +19,8 @@ Installation
 
 3.  Update config file and add the following plugins to `ckan.plugins` list : `edc_disqus`.
 
-4.  Update (or create) `import.ini` file inside `ckanext-bcgov/ckanext/bcgov/scripts/config`. Add `api_key`, `site_url` options (they should be the same as in your CKAN `.ini` file).
+4.  Add edcdisqus.api_key, edcdisqus.forum_name, edcdisqus.access_token, edcdisqus.api_secret and edcdisqus.widget_api_key to the 
+    ckan.ini file using the values you get from disqus
 
 
     Original Repo Copyright 2018, Province of British Columbia.
